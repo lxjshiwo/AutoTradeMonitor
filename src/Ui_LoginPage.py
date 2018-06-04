@@ -52,7 +52,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
+        MainWindow.setWindowTitle(_translate("MainWindow", "登录界面", None))
         self.pushButton.setText(_translate("MainWindow", "登陆", None))
         self.pushButton_2.setText(_translate("MainWindow", "取消", None))
         self.label.setText(_translate("MainWindow", "用户名:", None))

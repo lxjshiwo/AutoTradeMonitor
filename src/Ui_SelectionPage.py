@@ -43,16 +43,24 @@ class Ui_Dialog(object):
         self.pushButton_4 = QtGui.QPushButton(self.verticalLayoutWidget)
         self.pushButton_4.setObjectName(_fromUtf8("pushButton_4"))
         self.verticalLayout.addWidget(self.pushButton_4)
+        self.pushButton_5 = QtGui.QPushButton(self.verticalLayoutWidget)
+        self.pushButton_5.setObjectName(_fromUtf8("pushButton_5"))
+        self.verticalLayout.addWidget(self.pushButton_5)
+        self.pushButton_6 = QtGui.QPushButton(self.verticalLayoutWidget)
+        self.pushButton_6.setObjectName(_fromUtf8("pushButton_6"))
+        self.verticalLayout.addWidget(self.pushButton_6)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(_translate("Dialog", "日内交易", None))
+        Dialog.setWindowTitle(_translate("Dialog", "功能界面", None))
         self.pushButton_2.setText(_translate("Dialog", "日内交易", None))
         self.pushButton.setText(_translate("Dialog", "日内快速交易", None))
         self.pushButton_3.setText(_translate("Dialog", "未完成委托", None))
         self.pushButton_4.setText(_translate("Dialog", "交易记录", None))
+        self.pushButton_5.setText(_translate("Dialog", "股票回测信息", None))
+        self.pushButton_6.setText(_translate("Dialog", "账户信息", None))
 
 
 if __name__ == "__main__":

@@ -10,8 +10,10 @@ import Ui_InnerDayTrade
 import Ui_InnerDayQuickTrade
 import Ui_TradeRecord
 import Ui_UnfinishRecord
+import Ui_StockBackTrace
 
 from Ui_SelectionPage import Ui_Dialog
+import Ui_AllAccountInfo
 
 class Dialog(QDialog, Ui_Dialog):
     """
@@ -63,7 +65,7 @@ class Dialog(QDialog, Ui_Dialog):
         """
         # TODO: not implemented yet
         Form_innerDayTrade = QtGui.QDialog()  
-        innerDayTrade = Ui_TradeRecord.Ui_Dialog()
+        innerDayTrade = Ui_UnfinishRecord.Ui_Dialog()
         innerDayTrade.setupUi(Form_innerDayTrade)  
         Form_innerDayTrade.show()  
         Form_innerDayTrade.exec_()
@@ -77,9 +79,35 @@ class Dialog(QDialog, Ui_Dialog):
         """
         # TODO: not implemented yet
         Form_innerDayTrade = QtGui.QDialog()  
-        innerDayTrade = Ui_UnfinishRecord.Ui_Dialog()
+        innerDayTrade = Ui_TradeRecord.Ui_Dialog()
         innerDayTrade.setupUi(Form_innerDayTrade)  
         Form_innerDayTrade.show()  
         Form_innerDayTrade.exec_()
+
+
+    @pyqtSignature("")
+    def on_pushButton_5_clicked(self):
+        """
+        to show the stockbacktrace Page
+        """
+        Form_backTracePage = QtGui.QDialog()  
+        backTracePage = Ui_StockBackTrace.Ui_Dialog()
+        backTracePage.setupUi(Form_backTracePage)  
+        Form_backTracePage.show()  
+        Form_backTracePage.exec_()
+
+    
+    @pyqtSignature("")
+    def on_pushButton_6_clicked(self):
+        """
+        to show the AllInfoPage
+        """
+        Form_AllAcountInfo = QtGui.QDialog()  
+        allAcountInfo = Ui_AllAccountInfo.Ui_Dialog()
+        allAcountInfo.setupUi(Form_AllAcountInfo)  
+        Form_AllAcountInfo.show()  
+        Form_AllAcountInfo.exec_()
+
+        
         
 

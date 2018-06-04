@@ -9,6 +9,7 @@
 from PyQt4 import QtCore, QtGui
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
+import Ui_InstantTrade
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -22,6 +23,22 @@ try:
 except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
+    
+class MyTableView(QTableView):
+    def __init__(self, parent=None):
+        super(MyTableView, self).__init__(parent)
+
+    def mouseDoubleClickEvent(self, event):
+        QTableView.mouseDoubleClickEvent(self, event)
+        pos = event.pos()
+        item = self.indexAt(pos)
+#        if item:
+#            print "item clicked at ", item.row(), " ", item.column()
+        Form_instantTrade = QtGui.QDialog()  
+        instantTrade = Ui_InstantTrade.Ui_Dialog()
+        instantTrade.setupUi(Form_instantTrade)  
+        Form_instantTrade.show()  
+        Form_instantTrade.exec_()
 
 class Ui_Dialog(object):
     def initBuySituation(self, tableView, model):
@@ -78,7 +95,8 @@ class Ui_Dialog(object):
         self.pushButton = QtGui.QPushButton(Dialog)
         self.pushButton.setGeometry(QtCore.QRect(210, 30, 51, 23))
         self.pushButton.setObjectName(_fromUtf8("pushButton"))
-        self.tableView = QtGui.QTableView(Dialog)
+#         self.tableView = QtGui.QTableView(Dialog)
+        self.tableView = MyTableView(Dialog)
         self.tableView.setGeometry(QtCore.QRect(20, 180, 231, 192))
         self.tableView.setObjectName(_fromUtf8("tableView"))
         self.tableView_2 = QtGui.QTableView(Dialog)
